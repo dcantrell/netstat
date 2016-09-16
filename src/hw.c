@@ -44,10 +44,6 @@ extern struct hwtype strip_hwtype;
 extern struct hwtype ether_hwtype;
 extern struct hwtype fddi_hwtype;
 extern struct hwtype hippi_hwtype;
-extern struct hwtype tr_hwtype;
-#ifdef ARPHRD_IEEE802_TR
-extern struct hwtype tr_hwtype1;
-#endif
 
 extern struct hwtype ax25_hwtype;
 extern struct hwtype rose_hwtype;
@@ -90,8 +86,6 @@ static const struct hwtype * const hwtypes[] =
     &strip_hwtype,
     &ash_hwtype,
     &ether_hwtype,
-    &tr_hwtype,
-    &tr_hwtype1,
     &ax25_hwtype,
     &netrom_hwtype,
     &rose_hwtype,
@@ -146,8 +140,6 @@ static void hwinit(void)
     sit_hwtype.title = _("IPv6-in-IPv4");
 #endif
     irda_hwtype.title = _("IrLAP");
-    tr_hwtype.title = _("16/4 Mbps Token Ring");
-    tr_hwtype1.title = _("16/4 Mbps Token Ring (New)") ;
     ec_hwtype.title = _("Econet");
     ib_hwtype.title = _("InfiniBand");
     eui64_hwtype.title = _("Generic EUI-64");
