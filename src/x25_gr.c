@@ -1,0 +1,75 @@
+/*
+ * lib/x25_gr.c	This file contains an implementation of the "X.25"
+ *		route print support functions.
+ *
+ * Version:	lib/x25_gr.c	1.00	08/15/98
+ *
+ * Author:	Stephane Fillod, <sfillod@charybde.gyptis.frmug.org>
+ * 		based on ax25_gr.c by:
+ *		Bernd Eckenfels, <ecki@lina.inka.de>
+ *		Copyright 1999 Bernd Eckenfels, Germany
+ *		base on Code from Jonathan Naylor <jsn@Cs.Nott.AC.UK>
+ *
+ *		This program is free software; you can redistribute it
+ *		and/or  modify it under  the terms of  the GNU General
+ *		Public  License as  published  by  the  Free  Software
+ *		Foundation;  either  version 2 of the License, or  (at
+ *		your option) any later version.
+ */
+#include "config.h"
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include "net-support.h"
+#include "pathnames.h"
+#include "proc.h"
+#include "intl.h"
+
+static FILE *proc_fopen_x25_route(void)
+{
+	FILE *ret = proc_fopen(_PATH_PROCNET_X25_ROUTE);
+	if (ret)
+		return ret;
+	/* try old linux-2.4 name */
+	return proc_fopen("/proc/net/x25_routes");
+}
+
+int X25_rprint(int options)
+{
+	FILE *f=proc_fopen_x25_route();
+	char buffer[256];
+	char *p;
+	int  digits;
+
+	if(f==NULL)
+	{
+		printf( _("X.25 not configured in this system.\n")); /* xxx */
+		return 1;
+	}
+	printf( _("Kernel X.25 routing table\n")); /* xxx */
+	printf( _("Destination          Iface\n")); /* xxx */
+	if (fgets(buffer,256,f))
+		/* eat line */;
+	while(fgets(buffer,256,f))
+	{
+		p = strchr(buffer,'\n');
+		if (p)
+			*p=0;
+
+		buffer[24]=0;
+		buffer[35]=0;
+		digits=atoi(buffer+17);
+		if (digits < 0 || digits > 15)
+			digits=15;
+		buffer[digits]=0;
+		if (digits == 0)
+			printf("*                    %-5s\n", buffer+25);
+		else
+			printf("%s/%*d   %-5s\n",
+				buffer,digits-17,digits,buffer+25);
+	}
+	fclose(f);
+	return 0;
+}
