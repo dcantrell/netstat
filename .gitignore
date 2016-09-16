@@ -20,6 +20,7 @@ depmod
 install-sh
 libtool
 ltmain.sh
+m4
 missing
 netstat
 stamp-h1
