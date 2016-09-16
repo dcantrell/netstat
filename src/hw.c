@@ -39,7 +39,6 @@ extern struct hwtype cslip_hwtype;
 extern struct hwtype slip6_hwtype;
 extern struct hwtype cslip6_hwtype;
 extern struct hwtype adaptive_hwtype;
-extern struct hwtype strip_hwtype;
 
 extern struct hwtype ether_hwtype;
 extern struct hwtype fddi_hwtype;
@@ -83,7 +82,6 @@ static const struct hwtype * const hwtypes[] =
     &slip6_hwtype,
     &cslip6_hwtype,
     &adaptive_hwtype,
-    &strip_hwtype,
     &ash_hwtype,
     &ether_hwtype,
     &ax25_hwtype,
