@@ -1,0 +1,1849 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the netstat package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: netstat 3.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-16 08:53-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/statistics.c:40
+msgid "ICMP input histogram:"
+msgstr ""
+
+#: src/statistics.c:41
+msgid "ICMP output histogram:"
+msgstr ""
+
+#: src/statistics.c:58
+#, c-format
+msgid "Default TTL is %llu"
+msgstr ""
+
+#: src/statistics.c:59
+#, c-format
+msgid "Forwarding is %s"
+msgstr ""
+
+#: src/statistics.c:60 src/statistics.c:95
+#, c-format
+msgid "%llu forwarded"
+msgstr ""
+
+#: src/statistics.c:61 src/statistics.c:81
+#, c-format
+msgid "%llu fragments created"
+msgstr ""
+
+#: src/statistics.c:62 src/statistics.c:82
+#, c-format
+msgid "%llu fragments failed"
+msgstr ""
+
+#: src/statistics.c:63 src/statistics.c:83
+#, c-format
+msgid "%llu fragments received ok"
+msgstr ""
+
+#: src/statistics.c:64 src/statistics.c:84
+#, c-format
+msgid "%llu with invalid addresses"
+msgstr ""
+
+#: src/statistics.c:65 src/statistics.c:85
+#, c-format
+msgid "%llu incoming packets delivered"
+msgstr ""
+
+#: src/statistics.c:66 src/statistics.c:86
+#, c-format
+msgid "%llu incoming packets discarded"
+msgstr ""
+
+#: src/statistics.c:67 src/statistics.c:87
+#, c-format
+msgid "%llu with invalid headers"
+msgstr ""
+
+#: src/statistics.c:68 src/statistics.c:90
+#, c-format
+msgid "%llu total packets received"
+msgstr ""
+
+#: src/statistics.c:69 src/statistics.c:93
+#, c-format
+msgid "%llu with unknown protocol"
+msgstr ""
+
+#: src/statistics.c:70 src/statistics.c:94
+#, c-format
+msgid "%llu outgoing packets dropped"
+msgstr ""
+
+#: src/statistics.c:71 src/statistics.c:97
+#, c-format
+msgid "%llu dropped because of missing route"
+msgstr ""
+
+#: src/statistics.c:72 src/statistics.c:98
+#, c-format
+msgid "%llu requests sent out"
+msgstr ""
+
+#: src/statistics.c:73 src/statistics.c:99
+#, c-format
+msgid "%llu packet reassemblies failed"
+msgstr ""
+
+#: src/statistics.c:74 src/statistics.c:100
+#, c-format
+msgid "%llu packets reassembled ok"
+msgstr ""
+
+#: src/statistics.c:75 src/statistics.c:101
+#, c-format
+msgid "%llu reassemblies required"
+msgstr ""
+
+#: src/statistics.c:76 src/statistics.c:102
+#, c-format
+msgid "%llu fragments dropped after timeout"
+msgstr ""
+
+#: src/statistics.c:88
+#, c-format
+msgid "%llu incoming multicast packets"
+msgstr ""
+
+#: src/statistics.c:89
+#, c-format
+msgid "%llu incoming packets with no route"
+msgstr ""
+
+#: src/statistics.c:91
+#, c-format
+msgid "%llu with packets too big"
+msgstr ""
+
+#: src/statistics.c:92
+#, c-format
+msgid "%llu with truncated packets"
+msgstr ""
+
+#: src/statistics.c:96
+#, c-format
+msgid "%llu outgoing multicast packets"
+msgstr ""
+
+#: src/statistics.c:107 src/statistics.c:120
+#, c-format
+msgid "address mask replies: %llu"
+msgstr ""
+
+#: src/statistics.c:108
+#, c-format
+msgid "address mask request: %llu"
+msgstr ""
+
+#: src/statistics.c:109 src/statistics.c:122 src/statistics.c:137
+#: src/statistics.c:153
+#, c-format
+msgid "destination unreachable: %llu"
+msgstr ""
+
+#: src/statistics.c:110 src/statistics.c:123 src/statistics.c:138
+#: src/statistics.c:154
+#, c-format
+msgid "echo replies: %llu"
+msgstr ""
+
+#: src/statistics.c:111 src/statistics.c:124 src/statistics.c:139
+#: src/statistics.c:155
+#, c-format
+msgid "echo requests: %llu"
+msgstr ""
+
+#: src/statistics.c:112 src/statistics.c:140
+#, c-format
+msgid "%llu input ICMP message failed"
+msgstr ""
+
+#: src/statistics.c:113 src/statistics.c:144
+#, c-format
+msgid "%llu ICMP messages received"
+msgstr ""
+
+#: src/statistics.c:114 src/statistics.c:127
+#, c-format
+msgid "wrong parameters: %llu"
+msgstr ""
+
+#: src/statistics.c:115 src/statistics.c:149 src/statistics.c:164
+#, c-format
+msgid "redirects: %llu"
+msgstr ""
+
+#: src/statistics.c:116
+#, c-format
+msgid "source quenches: %llu"
+msgstr ""
+
+#: src/statistics.c:117
+#, c-format
+msgid "timeout in transit: %llu"
+msgstr ""
+
+#: src/statistics.c:118
+#, c-format
+msgid "timestamp reply: %llu"
+msgstr ""
+
+#: src/statistics.c:119
+#, c-format
+msgid "timestamp request: %llu"
+msgstr ""
+
+#: src/statistics.c:121
+#, c-format
+msgid "address mask requests: %llu"
+msgstr ""
+
+#: src/statistics.c:125
+#, c-format
+msgid "%llu ICMP messages failed"
+msgstr ""
+
+#: src/statistics.c:126 src/statistics.c:159
+#, c-format
+msgid "%llu ICMP messages sent"
+msgstr ""
+
+#: src/statistics.c:128
+#, c-format
+msgid "redirect: %llu"
+msgstr ""
+
+#: src/statistics.c:129
+#, c-format
+msgid "source quench: %llu"
+msgstr ""
+
+#: src/statistics.c:130
+#, c-format
+msgid "time exceeded: %llu"
+msgstr ""
+
+#: src/statistics.c:131
+#, c-format
+msgid "timestamp replies: %llu"
+msgstr ""
+
+#: src/statistics.c:132
+#, c-format
+msgid "timestamp requests: %llu"
+msgstr ""
+
+#: src/statistics.c:141 src/statistics.c:156
+#, c-format
+msgid "group member queries: %llu"
+msgstr ""
+
+#: src/statistics.c:142 src/statistics.c:157
+#, c-format
+msgid "group member reductions: %llu"
+msgstr ""
+
+#: src/statistics.c:143 src/statistics.c:158
+#, c-format
+msgid "group member responses: %llu"
+msgstr ""
+
+#: src/statistics.c:145
+#, c-format
+msgid "neighbour advertisement: %llu"
+msgstr ""
+
+#: src/statistics.c:146
+#, c-format
+msgid "neighbour solicits: %llu"
+msgstr ""
+
+#: src/statistics.c:147 src/statistics.c:162
+#, c-format
+msgid "parameter problem: %llu"
+msgstr ""
+
+#: src/statistics.c:148 src/statistics.c:163
+#, c-format
+msgid "packets too big: %llu"
+msgstr ""
+
+#: src/statistics.c:150 src/statistics.c:165
+#, c-format
+msgid "router advertisement: %llu"
+msgstr ""
+
+#: src/statistics.c:151 src/statistics.c:166
+#, c-format
+msgid "router solicits: %llu"
+msgstr ""
+
+#: src/statistics.c:152
+#, c-format
+msgid "received ICMPv6 time exceeded: %llu"
+msgstr ""
+
+#: src/statistics.c:160
+#, c-format
+msgid "neighbor advertisements: %llu"
+msgstr ""
+
+#: src/statistics.c:161
+#, c-format
+msgid "neighbor solicits: %llu"
+msgstr ""
+
+#: src/statistics.c:167
+#, c-format
+msgid "sent ICMPv6 time exceeded: %llu"
+msgstr ""
+
+#: src/statistics.c:172
+#, c-format
+msgid "%llu active connection openings"
+msgstr ""
+
+#: src/statistics.c:173
+#, c-format
+msgid "%llu failed connection attempts"
+msgstr ""
+
+#: src/statistics.c:174
+#, c-format
+msgid "%llu connections established"
+msgstr ""
+
+#: src/statistics.c:175
+#, c-format
+msgid "%llu connection resets received"
+msgstr ""
+
+#: src/statistics.c:176
+#, c-format
+msgid "%llu bad segments received"
+msgstr ""
+
+#: src/statistics.c:177
+#, c-format
+msgid "%llu segments received"
+msgstr ""
+
+#: src/statistics.c:179
+#, c-format
+msgid "%llu resets sent"
+msgstr ""
+
+#: src/statistics.c:180
+#, c-format
+msgid "%llu segments sent out"
+msgstr ""
+
+#: src/statistics.c:181
+#, c-format
+msgid "%llu passive connection openings"
+msgstr ""
+
+#: src/statistics.c:182
+#, c-format
+msgid "%llu segments retransmitted"
+msgstr ""
+
+#: src/statistics.c:183
+#, c-format
+msgid "RTO algorithm is %s"
+msgstr ""
+
+#: src/statistics.c:190 src/statistics.c:200
+#, c-format
+msgid "%llu packets received"
+msgstr ""
+
+#: src/statistics.c:191 src/statistics.c:201
+#, c-format
+msgid "%llu packet receive errors"
+msgstr ""
+
+#: src/statistics.c:192 src/statistics.c:202
+#, c-format
+msgid "%llu packets to unknown port received"
+msgstr ""
+
+#: src/statistics.c:193 src/statistics.c:203
+#, c-format
+msgid "%llu packets sent"
+msgstr ""
+
+#: src/statistics.c:194
+#, c-format
+msgid "%llu receive buffer errors"
+msgstr ""
+
+#: src/statistics.c:195
+#, c-format
+msgid "%llu send buffer errors"
+msgstr ""
+
+#: src/statistics.c:208
+#, c-format
+msgid "%llu delayed acks further delayed because of locked socket"
+msgstr ""
+
+#: src/statistics.c:209
+#, c-format
+msgid "Quick ack mode was activated %llu times"
+msgstr ""
+
+#: src/statistics.c:210
+#, c-format
+msgid "%llu delayed acks sent"
+msgstr ""
+
+#: src/statistics.c:211
+#, c-format
+msgid "%llu resets received for embryonic SYN_RECV sockets"
+msgstr ""
+
+#: src/statistics.c:212
+#, c-format
+msgid "%llu SYNs to LISTEN sockets dropped"
+msgstr ""
+
+#: src/statistics.c:213
+#, c-format
+msgid "%llu times the listen queue of a socket overflowed"
+msgstr ""
+
+#: src/statistics.c:214
+#, c-format
+msgid "%llu ICMP packets dropped because socket was locked"
+msgstr ""
+
+#: src/statistics.c:215
+#, c-format
+msgid ""
+"%llu packets dropped from out-of-order queue because of socket buffer overrun"
+msgstr ""
+
+#: src/statistics.c:216
+#, c-format
+msgid "%llu ICMP packets dropped because they were out-of-window"
+msgstr ""
+
+#: src/statistics.c:217
+#, c-format
+msgid "%llu active connections rejected because of time stamp"
+msgstr ""
+
+#: src/statistics.c:218
+#, c-format
+msgid "%llu packetes rejected in established connections because of timestamp"
+msgstr ""
+
+#: src/statistics.c:219
+#, c-format
+msgid "%llu passive connections rejected because of time stamp"
+msgstr ""
+
+#: src/statistics.c:220
+#, c-format
+msgid "%llu packets pruned from receive queue because of socket buffer overrun"
+msgstr ""
+
+#: src/statistics.c:221
+#, c-format
+msgid "%llu packets pruned from receive queue"
+msgstr ""
+
+#: src/statistics.c:222
+#, c-format
+msgid "Ran %llu times out of system memory during packet sending"
+msgstr ""
+
+#: src/statistics.c:223
+#, c-format
+msgid "%llu invalid SYN cookies received"
+msgstr ""
+
+#: src/statistics.c:224
+#, c-format
+msgid "%llu SYN cookies received"
+msgstr ""
+
+#: src/statistics.c:225
+#, c-format
+msgid "%llu SYN cookies sent"
+msgstr ""
+
+#: src/statistics.c:226
+#, c-format
+msgid "%llu times unable to send RST due to no memory"
+msgstr ""
+
+#: src/statistics.c:227
+#, c-format
+msgid "%llu connections reset due to early user close"
+msgstr ""
+
+#: src/statistics.c:228
+#, c-format
+msgid "%llu connections reset due to unexpected data"
+msgstr ""
+
+#: src/statistics.c:229
+#, c-format
+msgid "%llu connections aborted after user close in linger timeout"
+msgstr ""
+
+#: src/statistics.c:230
+#, c-format
+msgid "%llu connections aborted due to memory pressure"
+msgstr ""
+
+#: src/statistics.c:231
+#, c-format
+msgid "%llu connections reset due to unexpected SYN"
+msgstr ""
+
+#: src/statistics.c:232
+#, c-format
+msgid "%llu connections aborted due to timeout"
+msgstr ""
+
+#: src/statistics.c:233
+#, c-format
+msgid "%llu bytes directly in process context from backlog"
+msgstr ""
+
+#: src/statistics.c:234
+#, c-format
+msgid "%llu bytes directly received in process context from prequeue"
+msgstr ""
+
+#: src/statistics.c:235
+#, c-format
+msgid "%llu DSACKs for out of order packets received"
+msgstr ""
+
+#: src/statistics.c:236
+#, c-format
+msgid "%llu DSACKs sent for out of order packets"
+msgstr ""
+
+#: src/statistics.c:237
+#, c-format
+msgid "%llu DSACKs sent for old packets"
+msgstr ""
+
+#: src/statistics.c:238
+#, c-format
+msgid "%llu DSACKs received"
+msgstr ""
+
+#: src/statistics.c:239
+#, c-format
+msgid "%llu congestion window recovered without slow start using DSACK"
+msgstr ""
+
+#: src/statistics.c:240
+#, c-format
+msgid "%llu congestion windows recovered without slow start by DSACK"
+msgstr ""
+
+#: src/statistics.c:241
+#, c-format
+msgid "Detected reordering %llu times using FACK"
+msgstr ""
+
+#: src/statistics.c:242
+#, c-format
+msgid "%llu fast retransmits"
+msgstr ""
+
+#: src/statistics.c:243
+#, c-format
+msgid "%llu forward retransmits"
+msgstr ""
+
+#: src/statistics.c:244
+#, c-format
+msgid "%llu congestion windows fully recovered without slow start"
+msgstr ""
+
+#: src/statistics.c:245
+#, c-format
+msgid "%llu predicted acknowledgments"
+msgstr ""
+
+#: src/statistics.c:246
+#, c-format
+msgid "%llu packet headers predicted"
+msgstr ""
+
+#: src/statistics.c:247
+#, c-format
+msgid "%llu packet headers predicted and directly queued to user"
+msgstr ""
+
+#: src/statistics.c:248
+#, c-format
+msgid "%llu timeouts in loss state"
+msgstr ""
+
+#: src/statistics.c:249
+#, c-format
+msgid "%llu TCP data loss events"
+msgstr ""
+
+#: src/statistics.c:250
+#, c-format
+msgid "%llu congestion windows recovered without slow start after partial ack"
+msgstr ""
+
+#: src/statistics.c:251
+#, c-format
+msgid "%llu retransmits lost"
+msgstr ""
+
+#: src/statistics.c:252
+#, c-format
+msgid "TCP ran low on memory %llu times"
+msgstr ""
+
+#: src/statistics.c:253
+#, c-format
+msgid "%llu congestion windows partially recovered using Hoe heuristic"
+msgstr ""
+
+#: src/statistics.c:254
+#, c-format
+msgid "%llu packets directly queued to recvmsg prequeue"
+msgstr ""
+
+#: src/statistics.c:255
+#, c-format
+msgid "%llu packets dropped from prequeue"
+msgstr ""
+
+#: src/statistics.c:256
+#, c-format
+msgid "%llu acknowledgments not containing data payload received"
+msgstr ""
+
+#: src/statistics.c:257
+#, c-format
+msgid "%llu packets collapsed in receive queue due to low socket buffer"
+msgstr ""
+
+#: src/statistics.c:258
+#, c-format
+msgid "%llu timeouts after reno fast retransmit"
+msgstr ""
+
+#: src/statistics.c:259
+#, c-format
+msgid "%llu reno fast retransmits failed"
+msgstr ""
+
+#: src/statistics.c:260
+#, c-format
+msgid "%llu classic Reno fast retransmits failed"
+msgstr ""
+
+#: src/statistics.c:261
+#, c-format
+msgid "%llu times recovered from packet loss due to fast retransmit"
+msgstr ""
+
+#: src/statistics.c:262
+#, c-format
+msgid "Detected reordering %llu times using reno fast retransmit"
+msgstr ""
+
+#: src/statistics.c:263
+#, c-format
+msgid "%llu timeouts after SACK recovery"
+msgstr ""
+
+#: src/statistics.c:264
+#, c-format
+msgid "%llu SACK retransmits failed"
+msgstr ""
+
+#: src/statistics.c:265
+#, c-format
+msgid "%llu times recovered from packet loss by selective acknowledgements"
+msgstr ""
+
+#: src/statistics.c:266
+#, c-format
+msgid "%llu bad SACK blocks received"
+msgstr ""
+
+#: src/statistics.c:267
+#, c-format
+msgid "Detected reordering %llu times using SACK"
+msgstr ""
+
+#: src/statistics.c:268
+#, c-format
+msgid "%llu times receiver scheduled too late for direct processing"
+msgstr ""
+
+#: src/statistics.c:269
+#, c-format
+msgid "%llu retransmits in slow start"
+msgstr ""
+
+#: src/statistics.c:270
+#, c-format
+msgid "%llu other TCP timeouts"
+msgstr ""
+
+#: src/statistics.c:271
+#, c-format
+msgid "Detected reordering %llu times using time stamp"
+msgstr ""
+
+#: src/statistics.c:272
+#, c-format
+msgid "%llu TCP sockets finished time wait in slow timer"
+msgstr ""
+
+#: src/statistics.c:273
+#, c-format
+msgid "%llu TCP sockets finished time wait in fast timer"
+msgstr ""
+
+#: src/statistics.c:274
+#, c-format
+msgid "%llu time wait sockets recycled by time stamp"
+msgstr ""
+
+#: src/statistics.c:279
+#, c-format
+msgid "%llu Number of Aborteds "
+msgstr ""
+
+#: src/statistics.c:280
+#, c-format
+msgid "%llu Active Associations"
+msgstr ""
+
+#: src/statistics.c:281
+#, c-format
+msgid "%llu Number of Packets with invalid Checksum"
+msgstr ""
+
+#: src/statistics.c:282
+#, c-format
+msgid "%llu Current Associations"
+msgstr ""
+
+#: src/statistics.c:283
+#, c-format
+msgid "%llu Number of messages fragmented"
+msgstr ""
+
+#: src/statistics.c:284
+#, c-format
+msgid "%llu Number of control chunks received"
+msgstr ""
+
+#: src/statistics.c:285
+#, c-format
+msgid "%llu Number of ordered chunks received"
+msgstr ""
+
+#: src/statistics.c:286
+#, c-format
+msgid "%llu Number of SCTP packets received"
+msgstr ""
+
+#: src/statistics.c:287
+#, c-format
+msgid "%llu Number of Unordered chunks received"
+msgstr ""
+
+#: src/statistics.c:288
+#, c-format
+msgid "%llu Number of control chunks sent"
+msgstr ""
+
+#: src/statistics.c:289
+#, c-format
+msgid "%llu Number of Out of Blue packets"
+msgstr ""
+
+#: src/statistics.c:290
+#, c-format
+msgid "%llu Number of ordered chunks sent"
+msgstr ""
+
+#: src/statistics.c:291
+#, c-format
+msgid "%llu Number of SCTP packets sent"
+msgstr ""
+
+#: src/statistics.c:292
+#, c-format
+msgid "%llu Number of Unordered chunks sent"
+msgstr ""
+
+#: src/statistics.c:293
+#, c-format
+msgid "%llu Passive Associations"
+msgstr ""
+
+#: src/statistics.c:294
+#, c-format
+msgid "%llu Number of messages reassembled "
+msgstr ""
+
+#: src/statistics.c:295
+#, c-format
+msgid "%llu Number of Graceful Terminations"
+msgstr ""
+
+#: src/statistics.c:372
+msgid "enabled"
+msgstr ""
+
+#: src/statistics.c:372
+msgid "disabled"
+msgstr ""
+
+#: src/statistics.c:517
+#, c-format
+msgid "error parsing %s\n"
+msgstr ""
+
+#: src/statistics.c:538 src/statistics.c:590
+msgid "cannot open /proc/net/snmp"
+msgstr ""
+
+#: src/statistics.c:543
+#, c-format
+msgid "Problem while parsing /proc/net/snmp\n"
+msgstr ""
+
+#: src/statistics.c:554
+#, c-format
+msgid "Problem while parsing /proc/net/netstat\n"
+msgstr ""
+
+#: src/statistics.c:580
+msgid "cannot open /proc/net/snmp6"
+msgstr ""
+
+#: src/netstat.c:495
+#, c-format
+msgid ""
+"(No info could be read for \"-p\": geteuid()=%d but you should be root.)\n"
+msgstr ""
+
+#: src/netstat.c:499
+#, c-format
+msgid ""
+"(Not all processes could be identified, non-owned process info\n"
+" will not be shown, you would have to be root to see it all.)\n"
+msgstr ""
+
+#: src/netstat.c:506 src/netstat.c:1470 src/netstat.c:1551
+msgid "LISTENING"
+msgstr ""
+
+#: src/netstat.c:507
+msgid "CONN SENT"
+msgstr ""
+
+#: src/netstat.c:508 src/netstat.c:1553
+msgid "DISC SENT"
+msgstr ""
+
+#: src/netstat.c:509 src/netstat.c:577 src/netstat.c:1238 src/netstat.c:1554
+msgid "ESTABLISHED"
+msgstr ""
+
+#: src/netstat.c:531
+#, c-format
+msgid "Active NET/ROM sockets\n"
+msgstr ""
+
+#: src/netstat.c:532
+#, c-format
+msgid ""
+"User       Dest       Source     Device  State        Vr/Vs    Send-Q  Recv-"
+"Q\n"
+msgstr ""
+
+#: src/netstat.c:543 src/netstat.c:1593
+#, c-format
+msgid "Problem reading data from %s\n"
+msgstr ""
+
+#: src/netstat.c:578
+msgid "SYN_SENT"
+msgstr ""
+
+#: src/netstat.c:579
+msgid "SYN_RECV"
+msgstr ""
+
+#: src/netstat.c:580
+msgid "FIN_WAIT1"
+msgstr ""
+
+#: src/netstat.c:581
+msgid "FIN_WAIT2"
+msgstr ""
+
+#: src/netstat.c:582
+msgid "TIME_WAIT"
+msgstr ""
+
+#: src/netstat.c:583
+msgid "CLOSE"
+msgstr ""
+
+#: src/netstat.c:584
+msgid "CLOSE_WAIT"
+msgstr ""
+
+#: src/netstat.c:585
+msgid "LAST_ACK"
+msgstr ""
+
+#: src/netstat.c:586 src/netstat.c:1773
+msgid "LISTEN"
+msgstr ""
+
+#: src/netstat.c:587
+msgid "CLOSING"
+msgstr ""
+
+#: src/netstat.c:660
+#, c-format
+msgid "warning, got bogus igmp6 line %d.\n"
+msgstr ""
+
+#: src/netstat.c:665 src/netstat.c:702 src/netstat.c:1106 src/netstat.c:1232
+#: src/netstat.c:1343
+#, c-format
+msgid "netstat: unsupported address family %d !\n"
+msgstr ""
+
+#: src/netstat.c:678 src/netstat.c:683 src/netstat.c:691 src/netstat.c:697
+#, c-format
+msgid "warning, got bogus igmp line %d.\n"
+msgstr ""
+
+#: src/netstat.c:740
+#, c-format
+msgid "Active X.25 sockets\n"
+msgstr ""
+
+#: src/netstat.c:742
+#, c-format
+msgid ""
+"Dest         Source          Device  LCI  State        Vr/Vs  Send-Q  Recv-"
+"Q\n"
+msgstr ""
+
+#: src/netstat.c:843
+#, c-format
+msgid "warning, got bogus sctp eps line.\n"
+msgstr ""
+
+#: src/netstat.c:864 src/netstat.c:962 src/netstat.c:974
+#, c-format
+msgid "unsupported address family %d"
+msgstr ""
+
+#: src/netstat.c:920
+#, c-format
+msgid "warning, got bogus sctp assoc line.\n"
+msgstr ""
+
+#: src/netstat.c:1075
+#, c-format
+msgid "warning, got bogus tcp line.\n"
+msgstr ""
+
+#: src/netstat.c:1118 src/netstat.c:1259 src/netstat.c:1356
+#, c-format
+msgid "off (0.00/%ld/%d)"
+msgstr ""
+
+#: src/netstat.c:1122
+#, c-format
+msgid "on (%2.2f/%ld/%d)"
+msgstr ""
+
+#: src/netstat.c:1127
+#, c-format
+msgid "keepalive (%2.2f/%ld/%d)"
+msgstr ""
+
+#: src/netstat.c:1132
+#, c-format
+msgid "timewait (%2.2f/%ld/%d)"
+msgstr ""
+
+#: src/netstat.c:1137
+#, c-format
+msgid "probe (%2.2f/%ld/%d)"
+msgstr ""
+
+#: src/netstat.c:1142 src/netstat.c:1268 src/netstat.c:1366
+#, c-format
+msgid "unkn-%d (%2.2f/%ld/%d)"
+msgstr ""
+
+#: src/netstat.c:1203
+#, c-format
+msgid "warning, got bogus udp line.\n"
+msgstr ""
+
+#: src/netstat.c:1246 src/netstat.c:1456 src/netstat.c:1489 src/netstat.c:1785
+#: src/netstat.c:1829
+msgid "UNKNOWN"
+msgstr ""
+
+#: src/netstat.c:1264 src/netstat.c:1361
+#, c-format
+msgid "on%d (%2.2f/%ld/%d)"
+msgstr ""
+
+#: src/netstat.c:1316
+#, c-format
+msgid "warning, got bogus raw line.\n"
+msgstr ""
+
+#: src/netstat.c:1409
+#, c-format
+msgid "warning, got bogus unix line.\n"
+msgstr ""
+
+#: src/netstat.c:1436
+msgid "STREAM"
+msgstr ""
+
+#: src/netstat.c:1440
+msgid "DGRAM"
+msgstr ""
+
+#: src/netstat.c:1444
+msgid "RAW"
+msgstr ""
+
+#: src/netstat.c:1448
+msgid "RDM"
+msgstr ""
+
+#: src/netstat.c:1452
+msgid "SEQPACKET"
+msgstr ""
+
+#: src/netstat.c:1461
+msgid "FREE"
+msgstr ""
+
+#: src/netstat.c:1477
+msgid "CONNECTING"
+msgstr ""
+
+#: src/netstat.c:1481 src/netstat.c:1767
+msgid "CONNECTED"
+msgstr ""
+
+#: src/netstat.c:1485
+msgid "DISCONNECTING"
+msgstr ""
+
+#: src/netstat.c:1519
+#, c-format
+msgid "Active UNIX domain sockets "
+msgstr ""
+
+#: src/netstat.c:1521 src/netstat.c:2242 src/netstat.c:2388
+#, c-format
+msgid "(servers and established)"
+msgstr ""
+
+#: src/netstat.c:1524 src/netstat.c:2245 src/netstat.c:2391
+#, c-format
+msgid "(only servers)"
+msgstr ""
+
+#: src/netstat.c:1526 src/netstat.c:2247 src/netstat.c:2393
+#, c-format
+msgid "(w/o servers)"
+msgstr ""
+
+#: src/netstat.c:1529
+#, c-format
+msgid ""
+"\n"
+"Proto RefCnt Flags       Type       State         I-Node  "
+msgstr ""
+
+#: src/netstat.c:1532
+#, c-format
+msgid " Path\n"
+msgstr ""
+
+#: src/netstat.c:1552
+msgid "SABM SENT"
+msgstr ""
+
+#: src/netstat.c:1555
+msgid "RECOVERY"
+msgstr ""
+
+#: src/netstat.c:1569
+#, c-format
+msgid "Active AX.25 sockets\n"
+msgstr ""
+
+#: src/netstat.c:1570
+#, c-format
+msgid "Dest       Source     Device  State        Vr/Vs    Send-Q  Recv-Q\n"
+msgstr ""
+
+#: src/netstat.c:1613
+#, c-format
+msgid "problem reading data from %s\n"
+msgstr ""
+
+#: src/netstat.c:1683
+#, c-format
+msgid ""
+"Active IPX sockets\n"
+"Proto Recv-Q Send-Q Local Address              Foreign Address            "
+"State"
+msgstr ""
+
+#: src/netstat.c:1685
+#, c-format
+msgid " User"
+msgstr ""
+
+#: src/netstat.c:1723
+msgid "ESTAB"
+msgstr ""
+
+#: src/netstat.c:1731
+msgid "UNK."
+msgstr ""
+
+#: src/netstat.c:1769
+msgid "OPEN"
+msgstr ""
+
+#: src/netstat.c:1771
+msgid "BOUND"
+msgstr ""
+
+#: src/netstat.c:1775
+msgid "CONNECT"
+msgstr ""
+
+#: src/netstat.c:1777
+msgid "CONNECT2"
+msgstr ""
+
+#: src/netstat.c:1779
+msgid "CONFIG"
+msgstr ""
+
+#: src/netstat.c:1781
+msgid "DISCONN"
+msgstr ""
+
+#: src/netstat.c:1783
+msgid "CLOSED"
+msgstr ""
+
+#: src/netstat.c:1804
+#, c-format
+msgid "warning, got bogus l2cap line.\n"
+msgstr ""
+
+#: src/netstat.c:1817
+msgid "SDP"
+msgstr ""
+
+#: src/netstat.c:1820
+msgid "LOW"
+msgstr ""
+
+#: src/netstat.c:1823
+msgid "MEDIUM"
+msgstr ""
+
+#: src/netstat.c:1826
+msgid "HIGH"
+msgstr ""
+
+#: src/netstat.c:1854
+#, c-format
+msgid "warning, got bogus rfcomm line.\n"
+msgstr ""
+
+#: src/netstat.c:1884
+#, c-format
+msgid "Kernel Interface table\n"
+msgstr ""
+
+#: src/netstat.c:1888
+#, c-format
+msgid ""
+"Iface      MTU    RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR "
+"Flg\n"
+msgstr ""
+
+#: src/netstat.c:1892
+msgid "missing interface information"
+msgstr ""
+
+#: src/netstat.c:1915
+#, c-format
+msgid ""
+"usage: netstat [-vWeenNcCF] [<Af>] -r         netstat {-V|--version|-h|--"
+"help}\n"
+msgstr ""
+
+#: src/netstat.c:1916
+#, c-format
+msgid "       netstat [-vWnNcaeol] [<Socket> ...]\n"
+msgstr ""
+
+#: src/netstat.c:1917
+#, c-format
+msgid ""
+"       netstat { [-vWeenNac] -i | [-cnNe] -M | -s [-6tuw] }\n"
+"\n"
+msgstr ""
+
+#: src/netstat.c:1919
+#, c-format
+msgid "        -r, --route              display routing table\n"
+msgstr ""
+
+#: src/netstat.c:1920
+#, c-format
+msgid "        -i, --interfaces         display interface table\n"
+msgstr ""
+
+#: src/netstat.c:1921
+#, c-format
+msgid "        -g, --groups             display multicast group memberships\n"
+msgstr ""
+
+#: src/netstat.c:1922
+#, c-format
+msgid ""
+"        -s, --statistics         display networking statistics (like SNMP)\n"
+msgstr ""
+
+#: src/netstat.c:1924
+#, c-format
+msgid ""
+"        -M, --masquerade         display masqueraded connections\n"
+"\n"
+msgstr ""
+
+#: src/netstat.c:1927
+#, c-format
+msgid "        -v, --verbose            be verbose\n"
+msgstr ""
+
+#: src/netstat.c:1928
+#, c-format
+msgid "        -W, --wide               don't truncate IP addresses\n"
+msgstr ""
+
+#: src/netstat.c:1929
+#, c-format
+msgid "        -n, --numeric            don't resolve names\n"
+msgstr ""
+
+#: src/netstat.c:1930
+#, c-format
+msgid "        --numeric-hosts          don't resolve host names\n"
+msgstr ""
+
+#: src/netstat.c:1931
+#, c-format
+msgid "        --numeric-ports          don't resolve port names\n"
+msgstr ""
+
+#: src/netstat.c:1932
+#, c-format
+msgid "        --numeric-users          don't resolve user names\n"
+msgstr ""
+
+#: src/netstat.c:1933
+#, c-format
+msgid "        -N, --symbolic           resolve hardware names\n"
+msgstr ""
+
+#: src/netstat.c:1934
+#, c-format
+msgid "        -e, --extend             display other/more information\n"
+msgstr ""
+
+#: src/netstat.c:1935
+#, c-format
+msgid "        -p, --programs           display PID/Program name for sockets\n"
+msgstr ""
+
+#: src/netstat.c:1936
+#, c-format
+msgid "        -o, --timers             display timers\n"
+msgstr ""
+
+#: src/netstat.c:1937
+#, c-format
+msgid ""
+"        -c, --continuous         continuous listing\n"
+"\n"
+msgstr ""
+
+#: src/netstat.c:1938
+#, c-format
+msgid "        -l, --listening          display listening server sockets\n"
+msgstr ""
+
+#: src/netstat.c:1939
+#, c-format
+msgid ""
+"        -a, --all                display all sockets (default: connected)\n"
+msgstr ""
+
+#: src/netstat.c:1940
+#, c-format
+msgid ""
+"        -F, --fib                display Forwarding Information Base "
+"(default)\n"
+msgstr ""
+
+#: src/netstat.c:1941
+#, c-format
+msgid "        -C, --cache              display routing cache instead of FIB\n"
+msgstr ""
+
+#: src/netstat.c:1943
+#, c-format
+msgid ""
+"        -Z, --context            display SELinux security context for "
+"sockets\n"
+msgstr ""
+
+#: src/netstat.c:1946
+#, c-format
+msgid ""
+"\n"
+"  <Socket>={-t|--tcp} {-u|--udp} {-U|--udplite} {-S|--sctp} {-w|--raw}\n"
+msgstr ""
+
+#: src/netstat.c:1947
+#, c-format
+msgid "           {-x|--unix} --ax25 --ipx --netrom\n"
+msgstr ""
+
+#: src/netstat.c:1948
+#, c-format
+msgid "  <AF>=Use '-6|-4' or '-A <af>' or '--<af>'; default: %s\n"
+msgstr ""
+
+#: src/netstat.c:1949
+#, c-format
+msgid "  List of possible address families (which support routing):\n"
+msgstr ""
+
+#: src/netstat.c:2123
+#, c-format
+msgid "SELinux is not enabled on this machine.\n"
+msgstr ""
+
+#: src/netstat.c:2129
+#, c-format
+msgid "SELinux is not enabled for this application.\n"
+msgstr ""
+
+#: src/netstat.c:2197
+#, c-format
+msgid "netstat: No statistics support for specified address family: %s\n"
+msgstr ""
+
+#: src/netstat.c:2239
+#, c-format
+msgid "Active Internet connections "
+msgstr ""
+
+#: src/netstat.c:2249
+#, c-format
+msgid ""
+"\n"
+"Proto Recv-Q Send-Q Local Address           Foreign Address         "
+"State      "
+msgstr ""
+
+#: src/netstat.c:2251
+#, c-format
+msgid " User       Inode     "
+msgstr ""
+
+#: src/netstat.c:2255
+#, c-format
+msgid " Timer"
+msgstr ""
+
+#: src/netstat.c:2299
+#, c-format
+msgid "IPv4 Group Memberships\n"
+msgstr ""
+
+#: src/netstat.c:2300
+#, c-format
+msgid "Interface       RefCnt Group\n"
+msgstr ""
+
+#: src/netstat.c:2385
+#, c-format
+msgid "Active Bluetooth connections "
+msgstr ""
+
+#: src/af.c:161 src/hw.c:166
+msgid "UNSPEC"
+msgstr ""
+
+#: src/af.c:163
+msgid "UNIX Domain"
+msgstr ""
+
+#: src/af.c:166
+msgid "DARPA Internet"
+msgstr ""
+
+#: src/af.c:169
+msgid "IPv6"
+msgstr ""
+
+#: src/af.c:172 src/hw.c:187
+msgid "AMPR AX.25"
+msgstr ""
+
+#: src/af.c:175 src/hw.c:193
+msgid "AMPR NET/ROM"
+msgstr ""
+
+#: src/af.c:178
+msgid "Novell IPX"
+msgstr ""
+
+#: src/af.c:181
+msgid "Appletalk DDP"
+msgstr ""
+
+#: src/af.c:184 src/hw.c:228
+msgid "Econet"
+msgstr ""
+
+#: src/af.c:187
+msgid "CCITT X.25"
+msgstr ""
+
+#: src/af.c:190 src/hw.c:190
+msgid "AMPR ROSE"
+msgstr ""
+
+#: src/af.c:193 src/hw.c:178
+msgid "Ash"
+msgstr ""
+
+#: src/af.c:250
+#, c-format
+msgid "Please don't supply more than one address family.\n"
+msgstr ""
+
+#: src/af.c:300
+#, c-format
+msgid "Too much address family arguments.\n"
+msgstr ""
+
+#: src/af.c:311
+#, c-format
+msgid "Unknown address family `%s'.\n"
+msgstr ""
+
+#: src/unix.c:57 src/unix.c:78
+msgid "[NONE SET]"
+msgstr ""
+
+#: src/sockets.c:63
+#, c-format
+msgid "No usable address families found.\n"
+msgstr ""
+
+#: src/getroute.c:100
+#, c-format
+msgid "Address family `%s' not supported.\n"
+msgstr ""
+
+#: src/getroute.c:106
+#, c-format
+msgid "No routing for address family `%s'.\n"
+msgstr ""
+
+#: src/interface.c:175
+#, c-format
+msgid "warning: no inet socket available: %s\n"
+msgstr ""
+
+#: src/interface.c:324
+#, c-format
+msgid "Warning: cannot open %s (%s). Limited output.\n"
+msgstr ""
+
+#: src/interface.c:570
+msgid "Device not found"
+msgstr ""
+
+#: src/interface.c:574
+#, c-format
+msgid "%s: error fetching interface information: %s\n"
+msgstr ""
+
+#: src/interface.c:607
+msgid "     - no statistics available -"
+msgstr ""
+
+#: src/interface.c:611
+#, c-format
+msgid "[NO FLAGS]"
+msgstr ""
+
+#: src/interface.c:695
+msgid "UP,"
+msgstr ""
+
+#: src/interface.c:697
+msgid "BROADCAST,"
+msgstr ""
+
+#: src/interface.c:699
+msgid "DEBUG,"
+msgstr ""
+
+#: src/interface.c:701
+msgid "LOOPBACK,"
+msgstr ""
+
+#: src/interface.c:703
+msgid "POINTOPOINT,"
+msgstr ""
+
+#: src/interface.c:705
+msgid "NOTRAILERS,"
+msgstr ""
+
+#: src/interface.c:707
+msgid "RUNNING,"
+msgstr ""
+
+#: src/interface.c:709
+msgid "NOARP,"
+msgstr ""
+
+#: src/interface.c:711
+msgid "PROMISC,"
+msgstr ""
+
+#: src/interface.c:713
+msgid "ALLMULTI,"
+msgstr ""
+
+#: src/interface.c:715
+msgid "SLAVE,"
+msgstr ""
+
+#: src/interface.c:717
+msgid "MASTER,"
+msgstr ""
+
+#: src/interface.c:719
+msgid "MULTICAST,"
+msgstr ""
+
+#: src/interface.c:722
+msgid "DYNAMIC,"
+msgstr ""
+
+#: src/interface.c:731
+#, c-format
+msgid "%s: %s  mtu %d"
+msgstr ""
+
+#: src/interface.c:735
+#, c-format
+msgid "  outfill %d  keepalive %d"
+msgstr ""
+
+#: src/interface.c:744 src/interface.c:842
+#, c-format
+msgid "        %s %s"
+msgstr ""
+
+#: src/interface.c:746
+#, c-format
+msgid "  netmask %s"
+msgstr ""
+
+#: src/interface.c:748
+#, c-format
+msgid "  broadcast %s"
+msgstr ""
+
+#: src/interface.c:751
+#, c-format
+msgid "  destination %s"
+msgstr ""
+
+#: src/interface.c:770
+#, c-format
+msgid "        %s %s  prefixlen %d"
+msgstr ""
+
+#: src/interface.c:774
+#, c-format
+msgid "  scopeid 0x%x"
+msgstr ""
+
+#: src/interface.c:778
+msgid "compat,"
+msgstr ""
+
+#: src/interface.c:782
+msgid "global,"
+msgstr ""
+
+#: src/interface.c:784
+msgid "link,"
+msgstr ""
+
+#: src/interface.c:786
+msgid "site,"
+msgstr ""
+
+#: src/interface.c:788
+msgid "host,"
+msgstr ""
+
+#: src/interface.c:806
+#, c-format
+msgid "        %s Ethernet-II   %s\n"
+msgstr ""
+
+#: src/interface.c:809
+#, c-format
+msgid "        %s Ethernet-SNAP %s\n"
+msgstr ""
+
+#: src/interface.c:812
+#, c-format
+msgid "        %s Ethernet802.2 %s\n"
+msgstr ""
+
+#: src/interface.c:815
+#, c-format
+msgid "        %s Ethernet802.3 %s\n"
+msgstr ""
+
+#: src/interface.c:825 src/interface.c:834
+#, c-format
+msgid "        %s %s\n"
+msgstr ""
+
+#: src/interface.c:844
+#, c-format
+msgid "        %s"
+msgstr ""
+
+#: src/interface.c:846
+#, c-format
+msgid "  txqueuelen %d"
+msgstr ""
+
+#: src/interface.c:851
+#, c-format
+msgid "        media %s"
+msgstr ""
+
+#: src/interface.c:853
+#, c-format
+msgid "autoselect"
+msgstr ""
+
+#: src/interface.c:910
+#, c-format
+msgid "RX packets %llu  bytes %llu (%lu.%lu %s)\n"
+msgstr ""
+
+#: src/interface.c:916
+#, c-format
+msgid "RX compressed:%lu\n"
+msgstr ""
+
+#: src/interface.c:919
+#, c-format
+msgid "RX errors %lu  dropped %lu  overruns %lu  frame %lu\n"
+msgstr ""
+
+#: src/interface.c:925
+#, c-format
+msgid "TX packets %llu  bytes %llu (%lu.%lu %s)\n"
+msgstr ""
+
+#: src/interface.c:931
+#, c-format
+msgid "TX compressed %lu\n"
+msgstr ""
+
+#: src/interface.c:934
+#, c-format
+msgid "TX errors %lu  dropped %lu overruns %lu  carrier %lu  collisions %lu\n"
+msgstr ""
+
+#: src/interface.c:944
+#, c-format
+msgid "interrupt %d  "
+msgstr ""
+
+#: src/interface.c:947
+#, c-format
+msgid "base 0x%x  "
+msgstr ""
+
+#: src/interface.c:949
+#, c-format
+msgid "memory 0x%lx-%lx  "
+msgstr ""
+
+#: src/interface.c:952
+#, c-format
+msgid "  dma 0x%x"
+msgstr ""
+
+#: src/hw.c:165
+msgid "Local Loopback"
+msgstr ""
+
+#: src/hw.c:168
+msgid "Serial Line IP"
+msgstr ""
+
+#: src/hw.c:169
+msgid "VJ Serial Line IP"
+msgstr ""
+
+#: src/hw.c:170
+msgid "6-bit Serial Line IP"
+msgstr ""
+
+#: src/hw.c:171
+msgid "VJ 6-bit Serial Line IP"
+msgstr ""
+
+#: src/hw.c:172
+msgid "Adaptive Serial Line IP"
+msgstr ""
+
+#: src/hw.c:175
+msgid "Ethernet"
+msgstr ""
+
+#: src/hw.c:181
+msgid "Fiber Distributed Data Interface"
+msgstr ""
+
+#: src/hw.c:184
+msgid "HIPPI"
+msgstr ""
+
+#: src/hw.c:196
+msgid "generic X.25"
+msgstr ""
+
+#: src/hw.c:199
+msgid "IPIP Tunnel"
+msgstr ""
+
+#: src/hw.c:202
+msgid "Point-to-Point Protocol"
+msgstr ""
+
+#: src/hw.c:205
+msgid "(Cisco)-HDLC"
+msgstr ""
+
+#: src/hw.c:206
+msgid "LAPB"
+msgstr ""
+
+#: src/hw.c:209
+msgid "ARCnet"
+msgstr ""
+
+#: src/hw.c:212
+msgid "Frame Relay DLCI"
+msgstr ""
+
+#: src/hw.c:213
+msgid "Frame Relay Access Device"
+msgstr ""
+
+#: src/hw.c:216
+msgid "IPv6-in-IPv4"
+msgstr ""
+
+#: src/hw.c:219
+msgid "IrLAP"
+msgstr ""
+
+#: src/hw.c:222
+msgid "16/4 Mbps Token Ring"
+msgstr ""
+
+#: src/hw.c:224
+msgid "16/4 Mbps Token Ring (New)"
+msgstr ""
+
+#: src/hw.c:231
+msgid "InfiniBand"
+msgstr ""
+
+#: src/hw.c:234
+msgid "Generic EUI-64"
+msgstr ""

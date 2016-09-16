@@ -33,7 +33,6 @@
 #include <string.h>
 #include "net-support.h"
 #include "pathnames.h"
-#include "version.h"
 #include "config.h"
 #include "intl.h"
 #include "util.h"

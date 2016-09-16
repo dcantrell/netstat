@@ -44,7 +44,6 @@
 
 #include "net-support.h"
 #include "pathnames.h"
-#include "version.h"
 #include "proc.h"
 
 #include "interface.h"

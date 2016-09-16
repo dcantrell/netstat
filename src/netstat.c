@@ -91,7 +91,6 @@
 
 #include "net-support.h"
 #include "pathnames.h"
-#include "version.h"
 #include "config.h"
 #include "intl.h"
 #include "sockets.h"
@@ -133,9 +132,9 @@ typedef enum {
 #define DFLT_AF "inet"
 
 #define FEATURE_NETSTAT
-#include "lib/net-features.h"
+#include "net-features.h"
 
-static char *Release = RELEASE, *Signature = "Fred Baumgarten, Alan Cox, Bernd Eckenfels, Phil Blundell, Tuan Hoang, Brian Micek and others";
+static char *Release = "3.0", *Signature = "Fred Baumgarten, Alan Cox, Bernd Eckenfels, Phil Blundell, Tuan Hoang, Brian Micek and others";
 
 
 #define E_READ  -1
