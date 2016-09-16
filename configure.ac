@@ -32,6 +32,33 @@ AC_CHECK_FUNCS([setlocale strchr strcspn strrchr strspn strstr strtoul \
                [],
                [AC_MSG_FAILURE([*** Required function $ac_func not found.])])
 
+# Localization support is optional.
+AC_ARG_ENABLE(i18n,
+    AC_HELP_STRING([--enable-i18n],
+                   [install translations for strings and man pages (default is no)]),
+    [i18n=$enableval],
+    [i18n=no])
+AM_CONDITIONAL(ENABLE_I18N, [test x$i18n = xyes])
+
+# SELinux support is conditional and requires libraries.
+AC_ARG_ENABLE(selinux,
+    AC_HELP_STRING([--enable-selinux],
+                   [enable SELinux support (default is no)]),
+    [selinux=$enableval],
+    [selinux=no])
+if test x$selinux = xyes ; then
+    AC_CHECK_LIB([selinux], [matchpathcon], [],
+        [AC_MSG_FAILURE([*** libselinux not usable.])])
+    AC_CHECK_LIB([selinux], [lsetfilecon], [],
+        [AC_MSG_FAILURE([*** libselinux not usable.])])
+
+    selinux_libs="-lselinux -laudit"
+    AC_SUBST(SELINUX_CFLAGS, [-DUSESELINUX=1])
+    AC_SUBST(SELINUX_LIBS, [$selinux_libs])
+
+    AM_CONDITIONAL(ENABLE_SELINUX, [test x$selinux = xyes])
+fi
+
 # Filter CFLAGS (remove duplicate flags)
 cflags_filter() {
     have=
@@ -52,5 +79,7 @@ CFLAGS="$(cflags_filter $CFLAGS)"
 
 AC_CONFIG_FILES([Makefile
                  src/Makefile
+                 man/Makefile
                  po/Makefile])
+
 AC_OUTPUT
