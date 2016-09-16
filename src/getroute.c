@@ -49,27 +49,15 @@ extern struct aftype x25_aftype;
 
 void getroute_init(void)
 {
-#if HAVE_AFINET
     inet_aftype.rprint = INET_rprint;
-#endif
 #if HAVE_AFINET6
     inet6_aftype.rprint = INET6_rprint;
 #endif
-#if HAVE_AFNETROM
     netrom_aftype.rprint = NETROM_rprint;
-#endif
-#if HAVE_AFAX25
     ax25_aftype.rprint = AX25_rprint;
-#endif
-#if HAVE_AFIPX
     ipx_aftype.rprint = IPX_rprint;
-#endif
-#if HAVE_AFATALK
     ddp_aftype.rprint = DDP_rprint;
-#endif
-#if HAVE_AFX25
     x25_aftype.rprint = X25_rprint;
-#endif
 }
 
 int route_info(const char *afname, int options)

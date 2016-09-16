@@ -16,9 +16,7 @@
 
 #include <sys/types.h>
 #include <sys/socket.h>
-#if HAVE_AFUNIX
 #include <sys/un.h>
-#endif
 #include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>
@@ -59,8 +57,6 @@ static const char *UNSPEC_sprint(const struct sockaddr_storage *sasp, int numeri
 }
 
 
-#if HAVE_AFUNIX
-
 /* Display a UNIX domain address. */
 static const char *UNIX_print(const char *ptr)
 {
@@ -88,7 +84,6 @@ struct aftype unix_aftype =
     -1,
     "/proc/net/unix"
 };
-#endif				/* HAVE_AFUNIX */
 
 
 struct aftype unspec_aftype =

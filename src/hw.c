@@ -82,78 +82,36 @@ static const struct hwtype * const hwtypes[] =
 
     &loop_hwtype,
 
-#if HAVE_HWSLIP
     &slip_hwtype,
     &cslip_hwtype,
     &slip6_hwtype,
     &cslip6_hwtype,
     &adaptive_hwtype,
-#endif
-#if HAVE_HWSTRIP
     &strip_hwtype,
-#endif
-#if HAVE_HWASH
     &ash_hwtype,
-#endif
-#if HAVE_HWETHER
     &ether_hwtype,
-#endif
-#if HAVE_HWTR
     &tr_hwtype,
-#ifdef ARPHRD_IEEE802_TR
     &tr_hwtype1,
-#endif
-#endif
-#if HAVE_HWAX25
     &ax25_hwtype,
-#endif
-#if HAVE_HWNETROM
     &netrom_hwtype,
-#endif
-#if HAVE_HWROSE
     &rose_hwtype,
-#endif
-#if HAVE_HWTUNNEL
     &tunnel_hwtype,
-#endif
-#if HAVE_HWPPP
     &ppp_hwtype,
-#endif
-#if HAVE_HWHDLCLAPB
     &hdlc_hwtype,
     &lapb_hwtype,
-#endif
-#if HAVE_HWARC
     &arcnet_hwtype,
-#endif
-#if HAVE_HWFR
     &dlci_hwtype,
     &frad_hwtype,
-#endif
 #if HAVE_HWSIT
     &sit_hwtype,
 #endif
-#if HAVE_HWFDDI
     &fddi_hwtype,
-#endif
-#if HAVE_HWHIPPI
     &hippi_hwtype,
-#endif
-#if HAVE_HWIRDA
     &irda_hwtype,
-#endif
-#if HAVE_HWEC
     &ec_hwtype,
-#endif
-#if HAVE_HWX25
     &x25_hwtype,
-#endif
-#if HAVE_HWIB
     &ib_hwtype,
-#endif
-#if HAVE_HWEUI64
     &eui64_hwtype,
-#endif
     &unspec_hwtype,
     NULL
 };
@@ -164,75 +122,35 @@ static void hwinit(void)
 {
     loop_hwtype.title = _("Local Loopback");
     unspec_hwtype.title = _("UNSPEC");
-#if HAVE_HWSLIP
     slip_hwtype.title = _("Serial Line IP");
     cslip_hwtype.title = _("VJ Serial Line IP");
     slip6_hwtype.title = _("6-bit Serial Line IP");
     cslip6_hwtype.title = _("VJ 6-bit Serial Line IP");
     adaptive_hwtype.title = _("Adaptive Serial Line IP");
-#endif
-#if HAVE_HWETHER
     ether_hwtype.title = _("Ethernet");
-#endif
-#if HAVE_HWASH
     ash_hwtype.title = _("Ash");
-#endif
-#if HAVE_HWFDDI
     fddi_hwtype.title = _("Fiber Distributed Data Interface");
-#endif
-#if HAVE_HWHIPPI
     hippi_hwtype.title = _("HIPPI");
-#endif
-#if HAVE_HWAX25
     ax25_hwtype.title = _("AMPR AX.25");
-#endif
-#if HAVE_HWROSE
     rose_hwtype.title = _("AMPR ROSE");
-#endif
-#if HAVE_HWNETROM
     netrom_hwtype.title = _("AMPR NET/ROM");
-#endif
-#if HAVE_HWX25
     x25_hwtype.title = _("generic X.25");
-#endif
-#if HAVE_HWTUNNEL
     tunnel_hwtype.title = _("IPIP Tunnel");
-#endif
-#if HAVE_HWPPP
     ppp_hwtype.title = _("Point-to-Point Protocol");
-#endif
-#if HAVE_HWHDLCLAPB
     hdlc_hwtype.title = _("(Cisco)-HDLC");
     lapb_hwtype.title = _("LAPB");
-#endif
-#if HAVE_HWARC
     arcnet_hwtype.title = _("ARCnet");
-#endif
-#if HAVE_HWFR
     dlci_hwtype.title = _("Frame Relay DLCI");
     frad_hwtype.title = _("Frame Relay Access Device");
-#endif
 #if HAVE_HWSIT
     sit_hwtype.title = _("IPv6-in-IPv4");
 #endif
-#if HAVE_HWIRDA
     irda_hwtype.title = _("IrLAP");
-#endif
-#if HAVE_HWTR
     tr_hwtype.title = _("16/4 Mbps Token Ring");
-#ifdef ARPHRD_IEEE802_TR
     tr_hwtype1.title = _("16/4 Mbps Token Ring (New)") ;
-#endif
-#endif
-#if HAVE_HWEC
     ec_hwtype.title = _("Econet");
-#endif
-#if HAVE_HWIB
     ib_hwtype.title = _("InfiniBand");
-#endif
-#if HAVE_HWEUI64
     eui64_hwtype.title = _("Generic EUI-64");
-#endif
     sVhwinit = 1;
 }
 

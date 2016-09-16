@@ -500,7 +500,6 @@ static void prg_cache_load(void)
 			 " will not be shown, you would have to be root to see it all.)\n"));
 }
 
-#if HAVE_AFNETROM
 static const char *netrom_state[] =
 {
     N_("LISTENING"),
@@ -552,7 +551,6 @@ static int netrom_info(void)
     fclose(f);
     return 0;
 }
-#endif
 
 /* These enums are used by IPX too. :-( */
 enum {
@@ -568,8 +566,6 @@ enum {
     TCP_LISTEN,
     TCP_CLOSING			/* now a valid state */
 };
-
-#if HAVE_AFINET || HAVE_AFINET6
 
 static const char *tcp_state[] =
 {
@@ -671,7 +667,6 @@ static void igmp_do_one(int lnr, const char *line,const char *prot)
 	printf("%-15s %-6d %s\n", device, refcnt, mcast_addr);
 #endif
     } else {    /* IPV4 */
-#if HAVE_AFINET
 	if (line[0] != '\t') {
 	    if (idx_flag) {
 		if ((num = sscanf( line, "%d\t%10c", &idx, device)) < 2) {
@@ -706,11 +701,9 @@ static void igmp_do_one(int lnr, const char *line,const char *prot)
 	safe_strncpy(mcast_addr, ap->sprint(&sas, flag_not & FLAG_NUM_HOST),
 		sizeof(mcast_addr));
 	printf("%-15s %-6d %s\n", device, refcnt, mcast_addr );
-#endif
     }    /* IPV4 */
 }
 
-#if HAVE_AFX25
 static int x25_info(void)
 {
        FILE *f=proc_fopen(_PATH_PROCNET_X25);
@@ -760,7 +753,6 @@ static int x25_info(void)
        fclose(f);
        return 0;
 }
-#endif
 
 static int igmp_info(void)
 {
@@ -1381,10 +1373,6 @@ static int raw_info(void)
 	       raw_do_one, "raw", "raw6");
 }
 
-#endif
-
-
-#if HAVE_AFUNIX
 
 #define HAS_INODE 1
 
@@ -1535,10 +1523,8 @@ static int unix_info(void)
 	INFO_GUTS(_PATH_PROCNET_UNIX, "AF UNIX", unix_do_one, "unix");
     }
 }
-#endif
 
 
-#if HAVE_AFAX25
 static int ax25_info(void)
 {
     FILE *f;
@@ -1630,10 +1616,8 @@ static int ax25_info(void)
     fclose(f);
     return 0;
 }
-#endif
 
 
-#if HAVE_AFIPX
 static int ipx_info(void)
 {
     FILE *f;
@@ -1757,7 +1741,6 @@ static int ipx_info(void)
     fclose(f);
     return 0;
 }
-#endif
 
 #if HAVE_AFBLUETOOTH
 const char *bluetooth_state(int state)
@@ -1920,9 +1903,7 @@ static void usage(int rc)
     fprintf(stderr, _("        -i, --interfaces         display interface table\n"));
     fprintf(stderr, _("        -g, --groups             display multicast group memberships\n"));
     fprintf(stderr, _("        -s, --statistics         display networking statistics (like SNMP)\n"));
-#if HAVE_FW_MASQUERADE
     fprintf(stderr, _("        -M, --masquerade         display masqueraded connections\n\n"));
-#endif
 
     fprintf(stderr, _("        -v, --verbose            be verbose\n"));
     fprintf(stderr, _("        -W, --wide               don't truncate IP addresses\n"));
@@ -1963,9 +1944,7 @@ int main
 	{"interfaces", 0, 0, 'i'},
 	{"help", 0, 0, 'h'},
 	{"route", 0, 0, 'r'},
-#if HAVE_FW_MASQUERADE
 	{"masquerade", 0, 0, 'M'},
-#endif
 	{"protocol", 1, 0, 'A'},
 	{"tcp", 0, 0, 't'},
 	{"sctp", 0, 0, 'S'},
@@ -2158,7 +2137,6 @@ int main
 	+ flag_l2cap + flag_rfcomm;
 
     if (flag_mas) {
-#if HAVE_FW_MASQUERADE && HAVE_AFINET
 #if MORE_THAN_ONE_MASQ_AF
 	if (!afname[0])
         safe_strncpy(afname, DFLT_AF, sizeof(afname));
@@ -2170,10 +2148,6 @@ int main
 		break;
 	    wait_continous();
 	}
-#else
-	ENOSUPP("netstat", "FW_MASQUERADE");
-	i = -1;
-#endif
 	return (i);
     }
 
@@ -2182,11 +2156,7 @@ int main
             safe_strncpy(afname, DFLT_AF, sizeof(afname));
 
         if (!strcmp(afname, "inet")) {
-#if HAVE_AFINET
             parsesnmp(flag_raw, flag_tcp, flag_udp, flag_sctp);
-#else
-            ENOSUPP("netstat", "AF INET");
-#endif
         } else if(!strcmp(afname, "inet6")) {
 #if HAVE_AFINET6
             parsesnmp6(flag_raw, flag_tcp, flag_udp);
@@ -2234,7 +2204,6 @@ int main
     }
     for (;;) {
 	if (!flag_arg || flag_tcp || flag_sctp || flag_udp || flag_udplite || flag_raw) {
-#if HAVE_AFINET
 	    prg_cache_load();
 	    printf(_("Active Internet connections "));	/* xxx */
 
@@ -2254,14 +2223,7 @@ int main
 	    if (flag_opt)
 		printf(_(" Timer"));	/* xxx */
 	    printf("\n");
-#else
-	    if (flag_arg) {
-		i = 1;
-		ENOSUPP("netstat", "AF INET");
-	    }
-#endif
 	}
-#if HAVE_AFINET
 	if (!flag_arg || flag_tcp) {
 	    i = tcp_info();
 	    if (i)
@@ -2303,69 +2265,33 @@ int main
 	    if (i)
 	        return (i);
 	}
-#endif
 
 	if (!flag_arg || flag_unx) {
-#if HAVE_AFUNIX
 	    prg_cache_load();
 	    i = unix_info();
 	    if (i)
 		return (i);
-#else
-	    if (flag_arg) {
-		i = 1;
-		ENOSUPP("netstat", "AF UNIX");
-	    }
-#endif
 	}
 	if (!flag_arg || flag_ipx) {
-#if HAVE_AFIPX
 	    i = ipx_info();
 	    if (i)
 		return (i);
-#else
-	    if (flag_arg) {
-		i = 1;
-		ENOSUPP("netstat", "AF IPX");
-	    }
-#endif
 	}
 	if (!flag_arg || flag_ax25) {
-#if HAVE_AFAX25
 	    i = ax25_info();
 	    if (i)
 		return (i);
-#else
-	    if (flag_arg) {
-		i = 1;
-		ENOSUPP("netstat", "AF AX25");
-	    }
-#endif
 	}
 	if(!flag_arg || flag_x25) {
-#if HAVE_AFX25
 	    /* FIXME */
 	    i = x25_info();
 	    if (i)
 		return(i);
-#else
-	    if (flag_arg) {
-		i = 1;
-		ENOSUPP("netstat", "AF X25");
-	    }
-#endif
 	}
 	if (!flag_arg || flag_netrom) {
-#if HAVE_AFNETROM
 	    i = netrom_info();
 	    if (i)
 		return (i);
-#else
-	    if (flag_arg) {
-		i = 1;
-		ENOSUPP("netstat", "AF NETROM");
-	    }
-#endif
 	}
 	if (!flag_arg || flag_rose) {
 #if 0 && HAVE_AFROSE

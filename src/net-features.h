@@ -100,11 +100,7 @@ static char *Features =
 #endif
 "RTF_REJECT "
 
-#if HAVE_FW_MASQUERADE
 "+"
-#else
-"-"
-#endif
 "FW_MASQUERADE "
 
 #endif				/* FEATURE_NETSTAT */
@@ -126,17 +122,9 @@ static char *Features =
 "(" DFLT_AF ")"
 #endif
 
-#if HAVE_AFUNIX
 " +"
-#else
-" -"
-#endif
 "UNIX "
-#if HAVE_AFINET
 "+"
-#else
-"-"
-#endif
 "INET "
 #if HAVE_AFINET6
 "+"
@@ -144,53 +132,21 @@ static char *Features =
 "-"
 #endif
 "INET6 "
-#if HAVE_AFIPX
 "+"
-#else
-"-"
-#endif
 "IPX "
-#if HAVE_AFAX25
 "+"
-#else
-"-"
-#endif
 "AX25 "
-#if HAVE_AFNETROM
 "+"
-#else
-"-"
-#endif
 "NETROM "
-#if HAVE_AFX25
 "+"
-#else
-"-"
-#endif
 "X25 "
-#if HAVE_AFATALK
 "+"
-#else
-"-"
-#endif
 "ATALK "
-#if HAVE_AFECONET
 "+"
-#else
-"-"
-#endif
 "ECONET "
-#if HAVE_AFROSE
 "+"
-#else
-"-"
-#endif
 "ROSE "
-#if HAVE_AFBLUETOOTH
 "+"
-#else
-"-"
-#endif
 "BLUETOOTH"
 
 "\nHW: "
@@ -199,82 +155,34 @@ static char *Features =
 "(" DFLT_HW ")"
 #endif
 
-#if HAVE_HWETHER
 " +"
-#else
-" -"
-#endif
 "ETHER "
-#if HAVE_HWARC
 "+"
-#else
-"-"
-#endif
 "ARC "
-#if HAVE_HWSLIP
 "+"
-#else
-"-"
-#endif
 "SLIP "
-#if HAVE_HWPPP
 "+"
-#else
-"-"
-#endif
 "PPP "
-#if HAVE_HWTUNNEL
 "+"
-#else
-"-"
-#endif
 "TUNNEL "
-#if HAVE_HWTR
 "+"
-#else
-"-"
-#endif
 "TR "
-#if HAVE_HWAX25
 "+"
-#else
-"-"
-#endif
 "AX25 "
 
-#if HAVE_HWNETROM
 "+"
-#else
-"-"
-#endif
 "NETROM "
 
-#if HAVE_HWX25
 "+"
-#else
-"-"
-#endif
 "X25 "
 
-#if HAVE_HWFR
 "+"
-#else
-"-"
-#endif
 "FR "
 
-#if HAVE_HWROSE
 "+"
-#else
-"-"
-#endif
 "ROSE "
 
-#if HAVE_HWASH
 "+"
-#else
-"-"
-#endif
 "ASH "
 
 #if HAVE_HWSIT
@@ -284,18 +192,10 @@ static char *Features =
 #endif
 "SIT "
 
-#if HAVE_HWFDDI
 "+"
-#else
-"-"
-#endif
 "FDDI "
 
-#if HAVE_HWHIPPI
 "+"
-#else
-"-"
-#endif
 "HIPPI "
 
 #if HAVE_HWHDLCLAPB
@@ -305,11 +205,7 @@ static char *Features =
 #endif
 "HDLC/LAPB "
 
-#if HAVE_HWEUI64
 "+"
-#else
-"-"
-#endif
 "EUI64 "
 ;
 
