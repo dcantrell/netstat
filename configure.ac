@@ -55,9 +55,11 @@ if test x$selinux = xyes ; then
     selinux_libs="-lselinux -laudit"
     AC_SUBST(SELINUX_CFLAGS, [-DUSESELINUX=1])
     AC_SUBST(SELINUX_LIBS, [$selinux_libs])
-
-    AM_CONDITIONAL(ENABLE_SELINUX, [test x$selinux = xyes])
 fi
+
+# Set conditional variables for Makefile.am files based on
+# the --enable-* values.
+AM_CONDITIONAL([ENABLE_SELINUX], [test x$selinux = xyes])
 
 # Filter CFLAGS (remove duplicate flags)
 cflags_filter() {

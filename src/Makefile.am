@@ -13,3 +13,7 @@ netstat_SOURCES = netstat.c statistics.c proc.c af.c unix.c util.c \
                   ppp.c tunnel.c ax25.c ax25_gr.c netrom.c netrom_gr.c \
                   ash.c hdlclapb.c frame.c ec_hw.c ddp_gr.c inet.c \
                   inet_gr.c ipx.c ipx_gr.c ddp.c masq_info.c
+
+if ENABLE_SELINUX
+CFLAGS += -DHAVE_SELINUX
+endif
