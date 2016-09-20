@@ -100,7 +100,9 @@ static struct interface *if_cache_add(const char *name)
 	    if (n < 0)
 		    break;
     }
-    new(new);
+    if ((new = calloc(sizeof(*new), 1)) == NULL) {
+	    abort();
+    }
     safe_strncpy(new->name, name, IFNAMSIZ);
     nextp = ife ? &ife->next : &int_list; // keep sorting
     new->prev = ife;
@@ -175,7 +177,10 @@ static int if_readconf(void)
     ifc.ifc_buf = NULL;
     for (;;) {
 	ifc.ifc_len = sizeof(struct ifreq) * numreqs;
-	ifc.ifc_buf = xrealloc(ifc.ifc_buf, ifc.ifc_len);
+	if ((ifc.ifc_buf = realloc(ifc.ifc_buf, ifc.ifc_len)) == NULL) {
+	    errno = ENOMEM;
+	    return -1;
+	}
 
 	if (ioctl(skfd, SIOCGIFCONF, &ifc) < 0) {
 	    perror("SIOCGIFCONF");

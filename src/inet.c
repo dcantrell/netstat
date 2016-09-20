@@ -218,7 +218,13 @@ static int INET_rresolve(char *name, size_t len, const struct sockaddr_storage *
     }
     if ((ent == NULL) && (np == NULL))
 	safe_strncpy(name, inet_ntoa(sin->sin_addr), len);
-    pn = (struct addr *) xmalloc(sizeof(struct addr));
+
+    pn = (struct addr *) calloc(sizeof(struct addr), 1);
+    if (pn == NULL) {
+        errno = ENOMEM;
+        return (-1);
+    }
+
     pn->addr = *sin;
     pn->next = INET_nn;
     pn->host = host;
@@ -382,7 +388,7 @@ static struct service *searchlist(struct service *servicebase, int number)
 }
 
 
-static int read_services(void)
+static void read_services(void)
 {
     struct servent *se;
     struct protoent *pe;
@@ -391,7 +397,9 @@ static int read_services(void)
     setservent(1);
     while ((se = getservent())) {
 	/* Allocate a service entry. */
-	item = (struct service *) xmalloc(sizeof(struct service));
+	if ((item = (struct service *) calloc(sizeof(struct service), 1)) == NULL) {
+	    abort();
+	}
 	item->name = strdup(se->s_name);
 	item->number = se->s_port;
 
@@ -411,13 +419,15 @@ static int read_services(void)
     setprotoent(1);
     while ((pe = getprotoent())) {
 	/* Allocate a service entry. */
-	item = (struct service *) xmalloc(sizeof(struct service));
+	if ((item = (struct service *) calloc(sizeof(struct service), 1)) == NULL) {
+	    abort();
+	}
 	item->name = strdup(pe->p_name);
 	item->number = htons(pe->p_proto);
 	add2list(&raw_name, item);
     }
     endprotoent();
-    return (0);
+    return;
 }
 
 
@@ -432,7 +442,7 @@ const char *get_sname(int socknumber, const char *proto, int numeric)
 	goto do_ntohs;
 
     if (!init) {
-	(void) read_services();
+	read_services();
 	init = 1;
     }
     buffer[0] = '\0';
