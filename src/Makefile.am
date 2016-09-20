@@ -17,3 +17,11 @@ netstat_SOURCES = netstat.c statistics.c proc.c af.c unix.c util.c \
 if ENABLE_SELINUX
 CFLAGS += -DHAVE_SELINUX
 endif
+
+if ENABLE_IPV6
+CFLAGS += -DHAVE_AFINET6
+endif
+
+if ENABLE_BLUETOOTH
+CFLAGS += -DHAVE_AFBLUETOOTH
+endif

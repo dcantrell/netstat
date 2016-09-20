@@ -56,10 +56,26 @@ if test x$selinux = xyes ; then
     AC_SUBST(SELINUX_LIBS, [$selinux_libs])
 fi
 
+# IPv6 support (and SIT) is not required
+AC_ARG_ENABLE([ipv6],
+    AC_HELP_STRING([--enable-ipv6],
+                   [enable IPv6 and SIT support (default is no)]),
+    [ipv6=$enableval],
+    [ipv6=no])
+
+# Bluetooth support requires additional libraries.
+AC_ARG_ENABLE([bluetooth],
+    AC_HELP_STRING([--enable-bluetooth],
+                   [enable Bluetooth support (default is no)]),
+    [bluetooth=$enableval],
+    [bluetooth=no])
+
 # Set conditional variables for Makefile.am files based on
 # the --enable-* values.
-AM_CONDITIONAL([ENABLE_SELINUX], [test x$selinux = xyes])
 AM_CONDITIONAL([ENABLE_I18N], [test x$i18n = xyes])
+AM_CONDITIONAL([ENABLE_SELINUX], [test x$selinux = xyes])
+AM_CONDITIONAL([ENABLE_IPV6], [test x$ipv6 = xyes])
+AM_CONDITIONAL([ENABLE_BLUETOOTH], [test x$bluetooth = xyes])
 
 # Filter CFLAGS (remove duplicate flags)
 cflags_filter() {
