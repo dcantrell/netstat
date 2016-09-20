@@ -49,7 +49,7 @@ char *proc_gen_fmt(char *name, int more, FILE * fh,...)
 		name, title);
 	return NULL;
     }
-    return xstrdup(format);
+    return strdup(format);
 }
 
 /*

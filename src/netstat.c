@@ -473,7 +473,7 @@ static void prg_cache_load(void)
 	    snprintf(finbuf, sizeof(finbuf), "%s/%s", direproc->d_name, cmdlp);
 #if HAVE_SELINUX
 	    if (getpidcon(atoi(direproc->d_name), &scon) == -1) {
-		    scon=xstrdup("-");
+		    scon = strdup("-");
 	    }
 	    prg_cache_add(inode, finbuf, scon);
 	    freecon(scon);

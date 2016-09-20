@@ -23,15 +23,6 @@ void *xmalloc(size_t sz)
     return p;
 }
 
-/* Like strdup, but oom() instead of NULL */
-char *xstrdup(const char *s)
-{
-    char *d = strdup(s);
-    if (!d)
-        oom();
-    return d;
-}
-
 void *xrealloc(void *oldp, size_t sz)
 {
     void *p = realloc(oldp, sz);
