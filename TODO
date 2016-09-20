@@ -1,0 +1,9 @@
+In no particular order:
+
+- Remove dead code.
+- Update code to work with more modern APIs.
+- Eliminate support for networking stuff we don't have anymore.
+- Expand translations (patches welcome!).
+- Add a test suite of some sort.
+- Update boilerplates.
+- Consistently indent code.
