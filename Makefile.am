@@ -5,7 +5,11 @@
 
 ACLOCAL_AMFLAGS = -I m4
 
-SUBDIRS = src man po
+SUBDIRS = src man
+
+if ENABLE_I18N
+SUBDIRS += po
+endif
 
 EXTRA_DIST = COPYING ABOUT-NLS README THANKS
 

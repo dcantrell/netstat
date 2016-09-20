@@ -38,7 +38,6 @@ AC_ARG_ENABLE(i18n,
                    [install translations for strings and man pages (default is no)]),
     [i18n=$enableval],
     [i18n=no])
-AM_CONDITIONAL(ENABLE_I18N, [test x$i18n = xyes])
 
 # SELinux support is conditional and requires libraries.
 AC_ARG_ENABLE(selinux,
@@ -60,6 +59,7 @@ fi
 # Set conditional variables for Makefile.am files based on
 # the --enable-* values.
 AM_CONDITIONAL([ENABLE_SELINUX], [test x$selinux = xyes])
+AM_CONDITIONAL([ENABLE_I18N], [test x$i18n = xyes])
 
 # Filter CFLAGS (remove duplicate flags)
 cflags_filter() {
@@ -82,6 +82,10 @@ CFLAGS="$(cflags_filter $CFLAGS)"
 AC_CONFIG_FILES([Makefile
                  src/Makefile
                  man/Makefile
+                 man/de_DE/Makefile
+                 man/en_US/Makefile
+                 man/fr_FR/Makefile
+                 man/pt_BR/Makefile
                  po/Makefile])
 
 AC_OUTPUT
