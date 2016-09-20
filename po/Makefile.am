@@ -84,7 +84,7 @@ dist_noinst_DATA = $(POFILES)
 # Build the .mo files but don't actually do anything with them. The real
 # install part is in the install-data-local target below. Build the .pot file
 # as well, even if there are no .mo files to build, so it can be tested.
-nodist_noinst_DATA = $(MOFILES) $(POTFILE)
+nodist_noinst_DATA = $(MOFILES)
 
 # How to build the .pot file. This needs to be regenerated if anything that
 # goes into it has changed.
@@ -132,4 +132,4 @@ uninstall-local:
 		rm -f $(DESTDIR)$(localedir)/$$lang/LC_MESSAGES/$(PACKAGE).mo ; \
 	done
 
-CLEANFILES = $(MERGED_POFILES) $(MOFILES) $(POTFILE)
+CLEANFILES = $(MERGED_POFILES) $(MOFILES)
