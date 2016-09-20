@@ -1,3 +1,17 @@
+netstat is based on the Linux net-tools project.  All code and files not
+related to netstat have been removed.  People who have helped with this:
+
+David Cantrell <david.l.cantrell@gmail.com>
+
+Many thanks to the contributors to net-tools over the years.  The contents of
+the original THANKS file is below.
+
+
+------------------------------------------------
+THANKS file from the original net-tools project:
+------------------------------------------------
+
+
 The following people have contributed over time to the net-tools project
 or to related files.
 
