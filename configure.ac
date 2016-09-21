@@ -1,5 +1,5 @@
 AC_PREREQ([2.69])
-AC_INIT([netstat], [3.0], [david.l.cantrell@gmail.com])
+AC_INIT([netstat], [1.0], [david.l.cantrell@gmail.com])
 AM_INIT_AUTOMAKE
 
 AC_CONFIG_SRCDIR([src/netstat.c])
